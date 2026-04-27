@@ -1,0 +1,11 @@
+-keep class io.flutter.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-dontwarn com.google.android.play.core.**
+-keep class com.google.android.play.core.** { *; }
+-keep class org.sqlite.** { *; }
+-keep class org.sqlite.database.** { *; }
+-keep class androidx.core.content.FileProvider { *; }
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+-keepattributes *Annotation*
+-dontwarn sun.misc.**

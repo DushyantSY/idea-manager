@@ -1,0 +1,33 @@
+# analysis_options.yaml
+# Strict-ish linting to keep the codebase clean and consistent.
+
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Style
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - prefer_final_fields
+    - prefer_final_locals
+    - unnecessary_const
+    - avoid_print              # Use debugPrint in production
+    - use_super_parameters
+    - prefer_single_quotes
+
+    # Safety
+    - avoid_dynamic_calls
+    - cancel_subscriptions
+    - close_sinks
+    - always_declare_return_types
+
+    # Flutter-specific
+    - sized_box_for_whitespace
+    - use_key_in_widget_constructors
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore  # Riverpod codegen edge case
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'

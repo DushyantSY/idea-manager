@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- android/app/src/main/res/xml/backup_rules.xml -->
+<full-backup-content>
+    <!-- Back up SharedPreferences (settings) but exclude raw DB -->
+    <exclude domain="database" path="idea_manager.db-shm" />
+    <exclude domain="database" path="idea_manager.db-wal" />
+</full-backup-content>
